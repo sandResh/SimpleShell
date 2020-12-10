@@ -1,4 +1,5 @@
-#include <stdbool.h>
+shell.c
+ <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -185,7 +186,6 @@ int main() {
           }
           exit(0);
         } else {
-          // 4. The parent process should wait for the child to complete unless its a background process
           signal(SIGINT, int_handler);
           signal(SIGALRM, timed_handler);
           alarm(10);     // Wait 10 seconds.
@@ -196,6 +196,23 @@ int main() {
             wait(NULL);
           }
         }
+  
+        // 4. The parent process should wait for the child to complete unless its a background process
+      
+      
+        // Hints (put these into Google):
+        // man fork
+        // man execvp
+        // man wait
+        // man strtok
+        // man environ
+        // man signals
+        
+        // Extra Credit
+        // man dup2
+        // man open
+        // man pipes
+    // This should never be reached.
     }
     return -1;
 }
